@@ -24,7 +24,7 @@ jobs:
           host: ${{ env.REMOTE_HOST }}
           username: ${{ env.REMOTE_USER }}
           key: ${{ secrets.AWS_SSH_KEY }}
-          source: "./*"
+          source: "./"
           target: ${{ env.REMOTE_PATH }}
 
       - name: Restart Nginx
