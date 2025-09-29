@@ -26,8 +26,8 @@ jobs:
           key: ${{ secrets.AWS_SSH_KEY }}
           source: "./"
           target: ${{ env.REMOTE_PATH }}
-          rm: true
-          exclude: ".git"
+          rm: false
+          overwrite: true
 
       - name: Reload Nginx
         uses: appleboy/ssh-action@v1.0.0
